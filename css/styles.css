@@ -40,6 +40,7 @@
   --items-portfolio: 3;
   --indent-portfolio: 30px;
   --animation: cubic-bezier(0.4, 0, 0.2, 1);
+  --animarion-time: 250ms;
 }
 
 body {
@@ -701,4 +702,9 @@ img {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.modal-ckeck-icon {
+  background-color: transparent;
+  stroke: #ffffff;
 }
