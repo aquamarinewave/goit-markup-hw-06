@@ -513,6 +513,10 @@ img {
   margin-right: 70px;
 }
 
+.footer-socials {
+  margin-right: 93px;
+}
+
 .footer-socials-header {
   padding-top: 12px;
   margin-bottom: 20px;
@@ -527,6 +531,53 @@ img {
 .footer-soc-link {
   color: var(--light-text-color);
   background-color: var(--soc-bg-color);
+}
+
+.footer-form {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-form-email {
+  width: 358px;
+  background-color: var(--dark-bg-color);
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: transparent;
+}
+
+.footer-form-email:hover,
+.footer-form-email:focus {
+  border: 1px solid var(--accent-text-color);
+  outline-color: var(--accent-text-color);
+}
+
+.footer-form-email::placeholder {
+  color: var(--sub-text-color-trans);
+}
+
+.footer-sent-btn {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--light-text-color);
+  background-color: var(--accent-bg-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.sent-icon {
+  fill: currentColor;
 }
 
 /* Portfolio */
@@ -698,13 +749,168 @@ img {
   fill: currentColor;
 }
 
+.modal-close-btn:hover .close-btn-icon,
+.modal-close-btn:focus .close-btn-icon {
+  fill: var(--accent-text-color);
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.modal-ckeck-icon {
-  background-color: transparent;
-  stroke: #ffffff;
+.form-container {
+  padding-top: 40px;
+  padding-left: 41px;
+  padding-right: 39px;
+  padding-bottom: 40px;
+}
+
+.modal-header {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.modal-label {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-label:focus-within > .modal-icon,
+.modal-label:hover > .modal-icon {
+  fill: var(--accent-bg-color);
+}
+
+.modal-label-text {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--submain-text-color);
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+}
+
+.modal-form-input {
+  width: 100%;
+  padding: 11px 36px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color var(--animarion-time) var(--animation);
+}
+
+.modal-form-input:focus-within {
+  border: 1px solid var(--accent-text-color);
+  outline-color: var(--accent-text-color);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  transform: translate(50%);
+}
+
+.modal-comment {
+  display: block;
+  padding: 12px 18px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: transparent;
+  transition: border-color var(--animarion-time) var(--animation);
+}
+
+.modal-comment:hover,
+.modal-comment:focus-within {
+  border: 1px solid var(--accent-text-color);
+  outline-color: var(--accent-text-color);
+}
+
+.modal-comment::placeholder {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.agriment-label {
+  color: var(--submain-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
+}
+
+.agriment-text {
+  user-select: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.agriment-link {
+  color: var(--accent-text-color);
+}
+
+.modal-ckecked-icon {
+  opacity: 0;
+  transition: opacity var(--animarion-time) var(--animation);
+}
+
+.agriment-checkbox:checked + .modal-ckeck-icon .modal-ckecked-icon {
+  opacity: 1;
+}
+
+.modal-unckecked-icon {
+  opacity: 1;
+  transition: opacity var(--animarion-time) var(--animation);
+}
+
+.agriment-checkbox:checked + .modal-ckeck-icon .modal-unckecked-icon {
+  opacity: 0;
+}
+
+.modal-send-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 52px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--light-text-color);
+  background-color: var(--accent-bg-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
