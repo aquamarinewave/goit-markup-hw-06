@@ -507,6 +507,7 @@ img {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-address {
@@ -518,7 +519,6 @@ img {
 }
 
 .footer-socials-header {
-  padding-top: 12px;
   margin-bottom: 20px;
   font-size: var(--main-font-size);
   font-weight: 700;
@@ -526,6 +526,10 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--light-text-color);
+}
+
+.footer-email-label {
+  display: block;
 }
 
 .footer-soc-link {
@@ -539,6 +543,7 @@ img {
 }
 
 .footer-form-email {
+  color: var(--sub-text-color-trans);
   width: 358px;
   background-color: var(--dark-bg-color);
   padding: 15px 16px;
@@ -606,14 +611,6 @@ img {
   border-radius: 4px;
   transition: box-shadow 250ms var(--animation);
 }
-
-/* 
-.current-bg {
-  color: var(--light-text-color);
-  background-color: var(--active-bg-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-} */
 
 .filter-btn:hover,
 .filter-btn:focus {
@@ -717,7 +714,7 @@ img {
   transform: translate(-50%, -50%);
 
   width: 528px;
-  height: 581px;
+  padding: 40px;
 
   background: var(--main-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -760,13 +757,6 @@ img {
   visibility: hidden;
 }
 
-.form-container {
-  padding-top: 40px;
-  padding-left: 41px;
-  padding-right: 39px;
-  padding-bottom: 40px;
-}
-
 .modal-header {
   display: block;
   margin-bottom: 12px;
@@ -807,14 +797,15 @@ img {
 
 .modal-form-input {
   width: 100%;
-  padding: 11px 36px;
+  padding: 11px 46px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
   transition: border-color var(--animarion-time) var(--animation);
 }
 
-.modal-form-input:focus-within {
+.modal-form-input:focus-within,
+.modal-form-input:hover {
   border: 1px solid var(--accent-text-color);
   outline-color: var(--accent-text-color);
 }
@@ -913,4 +904,11 @@ img {
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: background-color 250ms var(--animation);
+}
+
+.modal-send-btn:hover,
+.modal-send-btn:focus {
+  background: var(--active-bg-btn);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
